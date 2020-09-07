@@ -123,9 +123,10 @@ class _FormScreenState extends State<FormScreen> {
       appBar: AppBar(
         title: Text("Form Demo"),
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          margin: EdgeInsets.all(24.0),
+      body: Container(
+        margin: EdgeInsets.all(24.0),
+        child: SingleChildScrollView(
+          physics: ClampingScrollPhysics(),
           child: Form(
             key: _formKey,
             child: Column(
@@ -133,6 +134,10 @@ class _FormScreenState extends State<FormScreen> {
               children: [
                 _buildNameField(),
                 _buildEmailField(),
+                _buildPasswordField(),
+                _buildUrlField(),
+                _buildPhoneNumberField(),
+                _buildCaloriesField(),
                 _buildPasswordField(),
                 _buildUrlField(),
                 _buildPhoneNumberField(),
