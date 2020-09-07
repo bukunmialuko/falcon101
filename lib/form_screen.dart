@@ -123,34 +123,36 @@ class _FormScreenState extends State<FormScreen> {
       appBar: AppBar(
         title: Text("Form Demo"),
       ),
-      body: Container(
-        margin: EdgeInsets.all(24.0),
-        child: Form(
-          key: _formKey,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              _buildNameField(),
-              _buildEmailField(),
-              _buildPasswordField(),
-              _buildUrlField(),
-              _buildPhoneNumberField(),
-              _buildCaloriesField(),
-              SizedBox(
-                height: 100,
-              ),
-              RaisedButton(
-                  child: Text(
-                    "Submit",
-                    style: TextStyle(color: Colors.blue),
-                  ),
-                  onPressed: () {
-                    if (_formKey.currentState.validate()) {
-                      return;
-                    }
-                    _formKey.currentState.save();
-                  })
-            ],
+      body: SingleChildScrollView(
+        child: Container(
+          margin: EdgeInsets.all(24.0),
+          child: Form(
+            key: _formKey,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                _buildNameField(),
+                _buildEmailField(),
+                _buildPasswordField(),
+                _buildUrlField(),
+                _buildPhoneNumberField(),
+                _buildCaloriesField(),
+                SizedBox(
+                  height: 100,
+                ),
+                RaisedButton(
+                    child: Text(
+                      "Submit",
+                      style: TextStyle(color: Colors.blue),
+                    ),
+                    onPressed: () {
+                      if (_formKey.currentState.validate()) {
+                        return;
+                      }
+                      _formKey.currentState.save();
+                    })
+              ],
+            ),
           ),
         ),
       ),
