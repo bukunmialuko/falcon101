@@ -138,10 +138,6 @@ class _FormScreenState extends State<FormScreen> {
                 _buildUrlField(),
                 _buildPhoneNumberField(),
                 _buildCaloriesField(),
-                _buildPasswordField(),
-                _buildUrlField(),
-                _buildPhoneNumberField(),
-                _buildCaloriesField(),
                 SizedBox(
                   height: 100,
                 ),
